@@ -1,0 +1,23 @@
+{
+  "name": "jenhao",
+  "version": "1.0.0",
+  "description": "This is Jen-Hao Project for anfa.inc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "mkdir -p ./coffee ./webroot webroot/js webroot/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "keywords": [
+    "jenhao",
+    "his"
+  ],
+  "author": "Jung-Jen Huang",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
