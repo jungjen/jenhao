@@ -1,2 +1,8 @@
 node_modules
+webroot
+data
+server
+test
+jsx
 package-lock.json
+.favorites.json

@@ -4,8 +4,12 @@
   "description": "This is Jen-Hao Project for anfa.inc",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "mkdir -p ./coffee ./webroot webroot/js webroot/css"
+    "test": "mocha",
+    "setup": "mkdir -p data coffee coffee/server coffee/jsx coffee/test webroot webroot/js webroot/css",
+    "coffee": "coffee -bwc -o . coffee",
+    "babel": "babel -w -d webroot jsx/*.js jsx/**/*.js jsx/**/**/*.js",
+    "mongo-start":"/usr/local/mongodb/bin/mongod --dbpath ./data",
+    "mongo-stop": "kill `ps | awk  '/mongod --dbpath/ {print $1}'`"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,21 @@
   "author": "Jung-Jen Huang",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.4.1"
+    "fastify": "^2.10.0",
+    "fastify-cookie": "^3.2.0",
+    "fastify-session": "^3.1.0",
+    "jquery": "^3.4.1",
+    "mongodb": "^3.3.4",
+    "serve-static": "^1.14.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "mocha": "^6.2.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "should": "^13.2.3"
   }
 }
