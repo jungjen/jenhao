@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "setup": "mkdir -p data coffee coffee/server coffee/jsx coffee/test webroot webroot/js webroot/css",
+    "setup": "./setup.sh",
     "coffee": "coffee -bwc -o . coffee",
     "babel": "babel -w -d webroot jsx/*.js jsx/**/*.js jsx/**/**/*.js",
-    "mongo-start":"/usr/local/mongodb/bin/mongod --dbpath ./data",
+    "mongo-start": "/usr/local/mongodb/bin/mongod --dbpath ./data",
     "mongo-stop": "kill `ps | awk  '/mongod --dbpath/ {print $1}'`"
   },
   "repository": {
@@ -22,11 +22,19 @@
   "author": "Jung-Jen Huang",
   "license": "ISC",
   "dependencies": {
+    "echarts": "^4.4.0",
     "fastify": "^2.10.0",
     "fastify-cookie": "^3.2.0",
     "fastify-session": "^3.1.0",
+    "gulp": "^4.0.2",
     "jquery": "^3.4.1",
+    "js-cookie": "^2.2.1",
     "mongodb": "^3.3.4",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-semantic-ui": "^0.2.0",
+    "react-semantic-ui-range": "^0.7.0",
+    "redux": "^4.0.4",
     "serve-static": "^1.14.1"
   },
   "devDependencies": {
